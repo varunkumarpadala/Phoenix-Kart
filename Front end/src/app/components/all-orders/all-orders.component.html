@@ -1,0 +1,42 @@
+<div class='container-fluid'>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive table--no-card lg-b-0">
+            <table class="table table-border table-striped table-earning" border=1px>
+                <thead>
+                    <tr>
+                        <th class="text-center">Edit_Status</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Order_ID</th>
+                        <th class="text-center">Supplier_ID</th>
+                        <th class="text-center">Supplier_Name</th>
+                        <th class="text-center">Item_Name</th>
+                        <th class="text-center">Contact_Person</th>
+                        <th class="text-center">Mobile_Number</th>
+                        <th class="text-center">Delivery_Address</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Order_Date</th>
+                        <th class="text-center">Expected_Delivery_Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let data of arrays'>
+                        <td class="text-center"><a class='btn btn-primary' (click)='changeStatus(data);'>Change</a></td>
+                        <td class="text-center">{{data.Pstatus}}</td>
+                        <td class='text-center'>{{data._id}}</td>
+                        <td class="text-center">SID000{{data.Psid}}</td>
+                        <td class="text-center">{{data.Psname}}</td>
+                        <td class="text-center">{{data.Pbrand}}</td>
+                        <td class="text-center">{{data.Person}}</td>
+                        <td class="text-center">{{data.Mobile}}</td>
+                        <td class="text-center">{{data.Daddress}}</td>
+                        <td class="text-center">{{data.Pprice}}</td>
+                        <td class="text-center">{{data.Odate}}</td>
+                        <td class="text-center">{{data.Exdate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>

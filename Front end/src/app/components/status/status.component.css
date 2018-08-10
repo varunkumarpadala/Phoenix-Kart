@@ -1,0 +1,23 @@
+*
+{
+    line-height: 50px;
+    font-size: 24px;
+}
+.btn{
+    font-size: 18px;
+    height:50px;
+    padding:5px;
+    padding-top:0px;
+}
+
+td
+{
+    text-indent:100px;
+}
+
+td .dropdown-menu{
+    text-indent:0px;
+}
+table{
+    margin-top:10px;
+}

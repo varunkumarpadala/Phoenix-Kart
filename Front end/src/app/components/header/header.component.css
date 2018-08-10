@@ -1,0 +1,65 @@
+/* .komali .farimala .priya
+{
+    margin-left:500px;
+} */
+.navbar
+{
+    padding-top:15px;
+    padding-bottom: 15px;
+    letter-spacing: 3px;
+}
+/* .komali .farimala .varun
+{
+    margin-left:50px;
+} */
+
+.varun:hover , .priya:hover{
+    /* text-shadow: 1px 10px 100px white; */
+    transform: scale(1.1);
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color:white;
+    color: black;
+  }
+  
+  /* .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  } */
+  
+  .topnav-right {
+    float: right;
+  }
+
+  #main
+  {
+      font-size: 26px;
+  }
+  #sub
+  {
+      margin-top:7px;
+      padding-right:30px;
+  }

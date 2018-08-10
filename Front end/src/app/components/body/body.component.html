@@ -1,0 +1,81 @@
+<div class='container-fluid'>
+    <div class='row'>
+      <div class='col-sm-6 col-xs-12 col-md-6'>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" id='go' type="button">Go!</button>
+          </span>
+        </div>
+      </div>
+      <div class='col-sm-6 col-xs-12 col-md-6'>
+        <div class="dropdown">
+          &nbsp;&nbsp;&nbsp;
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Sort By:
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">New &amp; Popular</a>
+            <a class="dropdown-item" href="#">Price: Low to High</a>
+            <a class="dropdown-item" href="#">Price: High to Low</a>
+            <a class="dropdown-item" href="#">Avg. Customer Reviews</a>
+            <a class="dropdown-item" href="#">Newest Arrivals</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id='cards'>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" *ngFor='let data of arrays'>
+        <div class="card h-100">
+          
+          <img class="card-img-top" src="{{data.img}}" alt="">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{data.Ptitle}}
+            </h5>
+            <h5>&#8377;{{data.Pprice}}</h5>
+            <span>Brand: {{data.Pbrand}}</span><br/>
+            <span>Hard Disk: {{data.Phdd}}GB</span><br/>
+            <span>OS: {{data.Pos}}</span><br/>
+            <span>RAM: {{data.Pram}}GB</span><br/>
+          </div>
+          <div class="card-footer">
+              <span class='yellow'>Rating: {{data.Prating}}</span>
+              <!-- &#9733; &#9733; &#9733; &#9733; &#9734; -->
+            <button class='btn btn-primary float-right' (click)='addpo(data);'>Buy</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br/>
+
+      <br/>
+      <br/>
+      <br/>    
+  <!-- <div class='container-fluid'>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <ul class="pagination" id='Previous'>
+          <li class="page-item btn btn-primary disabled">&lt; Previous</li>
+        </ul>
+      </div>
+      <div class='col-sm-6'>
+        <ul class="pagination right" id='Next'>
+          <li class="page-item btn btn-primary">Next &gt;</li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+<!-- <div *ngFor='let myimage of array'>
+<img src='{{myimage}}'>
+</div> -->
+
+
+ 

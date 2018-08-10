@@ -1,0 +1,103 @@
+<table>
+  <tr>
+      <td>
+          Order ID
+      </td>
+      <td>
+          :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data._id}}
+      </td>
+  </tr>
+  <tr>
+      <td>
+          SupplierId
+      </td> 
+      <td>
+          :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SID-000{{data.Psid}}
+      </td>
+</tr>
+<tr>
+  <td>
+      Supplier Name
+  </td>
+  <td>
+      :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.Psname}}
+  </td>
+</tr>
+<tr>
+  <td>
+      Item Name
+  </td>
+  <td>
+      :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.Pbrand}}
+  </td>
+</tr>
+<tr>
+      <td>
+          Amount
+      </td>
+      <td>
+          :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.Pprice}}/-
+      </td>
+  </tr>
+<tr>
+  <td>
+      Contact Person
+  </td>
+  <td>
+      :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.Person}}
+  </td>
+</tr>
+<tr>
+  <td>
+      Mobile Number
+  </td>
+  <td>
+      :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.Mobile}}
+  </td>
+</tr>
+<tr>
+  <td>
+      Address
+  </td>
+  <td> 
+      :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.Daddress}}
+  </td>
+</tr>
+<tr>
+  <td>
+      Ordered Date
+  </td>
+  <td>
+      :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.Odate}}
+  </td>
+</tr>
+<tr>
+  <td>
+      Expected Delivery Date 
+  </td>
+  <td>
+      :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.Exdate}}
+  </td>
+</tr>
+<tr>
+  <td>Status</td>
+  <td>
+<div class="dropdown">
+  :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Change here
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" (click)="status('Submitted',data._id);">Submitted</a>
+    <a class="dropdown-item" (click)="status('Approved',data._id);">Approved</a>
+    <a class="dropdown-item" (click)="status('Declined',data._id);">Declined</a>
+  </div>
+  </div>
+</td>
+</tr>
+</table>
+
+<a class='btn btn-danger float-right mr-3' routerLink='/admin'>&lt;&lt;&lt; Go Back</a>
+<br/>
+<br/>
+

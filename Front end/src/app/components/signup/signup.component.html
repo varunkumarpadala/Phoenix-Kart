@@ -1,0 +1,123 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+        <div id="second">
+          <div class="myform form ">
+            <div class="logo mb-3">
+              <div class="col-md-12 text-center">
+                <h1>Signup</h1>
+              </div>
+            </div>
+            <form #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)" ngNativeValidate>
+              <div class="form-group">
+                <label for="First">User Name</label>
+                <input type="text" id='First' ngModel name="username" class="form-control" placeholder="Enter Username" required pattern='[a-zA-Z][a-zA-Z]+' #userName='ngModel'>
+              </div>
+              <div *ngIf='userName?.touched' class="alert alert-danger">
+                <div *ngIf='userName.errors?.required'>
+                Note: User Name must be filled
+              </div>
+              <div *ngIf='userName.errors?.pattern'>
+                Note: Invalid User Name
+              </div>
+              </div>
+              <div class="form-group">
+                <label for="Email">Email Address</label>
+                <input type="email" id='Email' ngModel name="email" class="form-control" placeholder="Enter Email address" required pattern='^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$' #emailAddress='ngModel' minlength="10" maxlength="10">
+              </div>
+              <div *ngIf='emailAddress?.touched' class="alert alert-danger">
+                <div *ngIf='emailAddress.errors?.required'>
+                Note: E-mail must be filled
+                </div>
+                <div *ngIf='emailAddress.errors?.pattern'>
+                  Note: Invalid E-mail Address
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="Mobile">Mobile Number</label>
+                <input type="text" id='Mobile' ngModel name="mobile" class="form-control" placeholder="Enter mobile number" required pattern='[0-9]*' #mobileNumber='ngModel'>
+              </div>
+              <div *ngIf='mobileNumber?.touched'>
+                <div *ngIf='mobileNumber.errors?.required' class="alert alert-danger">
+                Note: Mobile Number must be filled
+                </div>
+                <div *ngIf='mobileNumber.errors?.pattern || emailAddress.errors?.minlength' class="alert alert-danger">
+                    Note: Invalid Mobile Number
+                    </div>
+              
+                </div>
+                
+              <!-- <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id='password' ngModel name="pass" class="form-control" placeholder="Enter Password" required #password='ngModel' minlength="8">
+              </div> -->
+
+
+
+              <!-- <div *ngIf='password?.touched' class="alert alert-danger">
+                <div *ngIf='password.errors?.required'>
+                Note: Password must be filled
+                </div>
+                <div *ngIf='password.errors?.minlength'>
+                  Note: Invalid Password
+                  </div>
+              </div> -->
+
+
+              <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class='form-control' name="pass" ngModel required #pass="ngModel" placeholder='Enter Password'>
+                  </div>
+                  <div class='alert alert-danger' [hidden]="pass.valid || (pass.pristine && !signupForm.submitted)">
+                      Password is required
+                  </div>
+
+              <div class="form-group">
+                  <label>Retype password</label>
+                  <input type="password" class='form-control' name="pass2" ngModel required validateEqual="pass" #pass2="ngModel" placeholder="Enter Confirm Password">
+                  </div>
+                  <div class='alert alert-danger' [hidden]="pass2.valid || (pass2.pristine && !signupForm.submitted)">
+                      Password mismatch
+                  </div>
+
+
+
+
+              <!-- <div class="form-group">
+                <label for="password2">Re-enter Password</label>
+                <input type="password" id="password2" name="pass2" (keyup)='validatePasswords(signupForm.value.pass,signupForm.value.pass2);' ngModel class="form-control" placeholder="confirm Password" required #password2='ngModel'>
+              </div>
+              <div *ngIf='password2?.touched || password?.touched' class="alert alert-danger">
+              <div *ngIf='isValid; else notMatched'>         
+                Matched!
+                </div>
+                <ng-template #notMatched>Alternate text while primary text is hidden</ng-template>
+                </div> -->
+
+
+                <!-- <div *ngIf='password2.touched' class="alert alert-danger">
+                <div *ngIf='password2.errors?.required'>
+                Note: Confirm Password must be filled
+                </div>
+                <div *ngIf='password2.errors?.minlength'>
+                  Note: Invalid password
+                  </div> -->
+              <!-- </div> -->
+              <div class="col-md-12 text-center mb-3">
+                <button class=" btn btn-block mybtn btn-primary tx-tfm" type="submit" [disabled]='signupForm.invalid'>Get Started For Free</button>
+              </div>
+              <div class="col-md-12 ">
+                <div class="form-group">
+                  <p class="text-center">
+                    <a routerLink="/login">Already have an account?</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

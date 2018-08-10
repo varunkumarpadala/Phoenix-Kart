@@ -1,0 +1,56 @@
+<body>
+  <form #order='ngForm' (ngSubmit)='gotoConfirm(order);' ngNativeValidate>
+    <div class="container" align='center'>
+      <div class="form-group">
+        <b id='Place'>PURCHASE ORDER</b>
+      </div>
+      <div class='jumbotron jumbotron-default'>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <b>Purchase ID: </b>PID-000{{excess.Psid}}
+        </div>
+        <div class="form-group col-md-6">
+          <b>Supplier ID: </b>SID-000{{excess.Psid}}
+        </div>
+      </div>
+      <br/>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <b>Supplier Name: </b>{{excess.Psname}}
+        </div>
+        <div class="form-group col-md-6">
+          <b>Item Brand: </b>{{excess.Pbrand}}
+        </div>
+      </div>
+      <hr>
+      <div class="form-group">
+        <label for="inputAddress">Contact Person:</label>
+        <input type="text" class="form-control" ngModel id="inputAddress" name='contact' required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Mobile Number:</label>
+        <input type="number" maxlength=10 ngModel class="form-control" id="inputAddress2" name='mobile' required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress3">Address:</label>
+        <textarea cols=10 rows=3 class="form-control" ngModel id="inputAddress3" name='address' required></textarea>
+      </div>
+      <hr/>
+      <div class="form-group">
+        <b>Expected Delivery Date:{{datevar}}</b>
+      </div>
+      <hr>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="form-group col-md-6 right">
+            <button type="submit" class="btn btn-primary">Proceed</button>
+          </div>
+          <div class="form-group col-md-6 left">
+            <button class="btn btn-primary" >Cancel</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </form>
+</body>

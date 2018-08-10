@@ -1,0 +1,68 @@
+<body>
+  <br/>
+  <!-- <div class='container-fluid'> -->
+    <!-- <div class='row'>
+      <div class='col-sm-6 col-xs-12 col-md-4'>
+        <div class="dropdown">
+          &nbsp;&nbsp;&nbsp;
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Search By:
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">PO Number</a>
+            <a class="dropdown-item" href="#">Supplier ID</a>
+          </div>
+        </div>
+      </div>-->
+      
+    <!-- </div>
+  </div> -->
+
+  <h2 align='center'>Orders List</h2>
+  <br/>
+
+  <div class='container-fluid'>
+    <div class="row">
+  <!-- <div class='col-md-2'>
+        <input type='radio' (click)="checked='true'" name='radio' id='radio1' ><a routerLink="/admin/openOrders"><label for='radio1'>Open</label></a>
+    </div>
+    <div class='col-md-2'>
+      <a routerLink="/admin/completeOrders"><input (click)="checked='true'"  type='radio' name='radio' id='radio2'><label for='radio2'>Complete</label></a>
+    </div> -->
+    <!-- <div class='col-md-2'> -->
+    <!-- <a routerLink="/admin/allOrders">  -->
+      
+      
+      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" routerLink="/admin/openOrders" class="btn btn-secondary">Open</button>
+          <button type="button" routerLink="/admin/completeOrders" class="btn btn-secondary">Complete</button>
+          <button type="button" routerLink="/admin/" class="btn btn-secondary">All</button>
+        </div>
+
+</div>
+</div>
+    </div>
+<!-- </div> -->
+<br/>
+<div class='container-fluid'>
+<router-outlet></router-outlet>
+</div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <!-- <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/> -->
+</body>

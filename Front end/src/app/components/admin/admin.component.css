@@ -1,0 +1,27 @@
+input[type='radio']
+{
+    height:20px;
+    width:20px;
+}
+input[type='radio']:hover
+{
+    cursor: pointer;
+    transform:scale(1.1);
+}
+
+/* #radio1, #radio2, #radio3
+{
+    font-size: 30px;
+} */
+
+body
+{
+    margin:20px;
+}
+
+h2{
+    
+    font-family: monospace;
+    font-size:30px;
+    font-weight: bold;
+}

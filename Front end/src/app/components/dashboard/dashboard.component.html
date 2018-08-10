@@ -1,0 +1,165 @@
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class='col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-2'>
+      <body>
+        <div class='vl'>
+          <div class='container-fluid filters'>
+            <h5>
+              <a data-toggle="collapse" href="#filters" role="button" aria-expanded="true" aria-controls="filters">Filters:</a>
+            </h5>
+            <div class='collapse show' id='filters'>
+              <dl>
+                <dt>
+                  <a data-toggle="collapse" href="#memorySize" role="button" aria-expanded="false" aria-controls="memorySize">Memory Size&gt;&gt;</a>
+                </dt>
+                <div class="collapse multi-collapse" id="memorySize">
+                  <dd>
+                    <input name='ms' type="radio" (click)='ms(2);'>&nbsp;Up to 2 GB</dd>
+                  <dd>
+                    <input name='ms' type="radio" (click)='ms(3);'>&nbsp;3 GB</dd>
+                  <dd>
+                    <input name='ms' type="radio" (click)='ms(4);'>&nbsp;4 GB</dd>
+                  <dd>
+                    <input name='ms' type="radio" (click)='ms(6);'>&nbsp;6 GB</dd>
+                  <dd>
+                    <input name='ms' type="radio" (click)='ms(8);'>&nbsp;8 GB</dd>
+                  <dd>
+                    <input name='ms' type="radio" (click)='ms(12);'>&nbsp;12 GB</dd>
+                  <dd>
+                    <input name='ms' type="radio" (click)='ms(16);'>&nbsp;16 GB &amp; more</dd>
+                </div>
+              </dl>
+              <dl>
+                <dt>
+                  <a data-toggle="collapse" href="#operatingSystem" role="button" aria-expanded="false" aria-controls="operatingSystem">Operating System&gt;&gt;</a>
+                </dt>
+                <div class="collapse multi-collapse" id='operatingSystem'>
+                  <dd>
+                    <input name='os' type="radio" (click)="os('Windows');">&nbsp;Windows</dd>
+                  <dd>
+                    <input name='os' type="radio" (click)="os('Dos');">&nbsp;DOS</dd>
+                  <dd>
+                    <input name='os' type="radio"  (click)="os('Linux');">&nbsp;Linux</dd>
+                  <dd>
+                    <input name='os' type="radio" (click)="os('Mac');">&nbsp;Mac OS</dd>
+                </div>
+              </dl>
+              <dl>
+                <dt>
+                  <a data-toggle="collapse" href="#hardDisk" role="button" aria-expanded="false" aria-controls="hardDisk">HDD Size&gt;&gt;</a>
+                </dt>
+                <div class="collapse multi-collapse" id='hardDisk'>
+                  <dd>
+                    <input name='hs' type="radio" (click)="hs(1);">&nbsp;Up to 159 GB</dd>
+                  <dd>
+                    <input name='hs' type="radio" (click)="hs(2);">&nbsp;160 - 249 GB</dd>
+                  <dd>
+                    <input name='hs' type="radio" (click)="hs(3);">&nbsp;250 - 499 GB</dd>
+                  <dd>
+                    <input name='hs' type="radio" (click)="hs(4);">&nbsp;500 - 999 GB</dd>
+                  <dd>
+                    <input name='hs' type="radio" (click)="hs(5);">&nbsp;1TB &amp; More</dd>
+                </div>
+              </dl>
+              <dl>
+                <dt>
+                  <a data-toggle="collapse" href="#price" role="button" aria-expanded="false" aria-controls="price">Price&gt;&gt;</a>
+                </dt>
+                <div class='collapse multi-collapse' id='price'>
+                  <dd>
+                    <input name='p' type="radio" (click)='p(10000);'> &nbsp;Under ₹20,000</dd>
+                  <dd>
+                    <input name='p' type="radio" (click)='p(20000);'>&nbsp;₹20,000 – ₹30,000</dd>
+                  <dd>
+                    <input name='p' type="radio" (click)='p(30000);'>&nbsp;₹30,000 – ₹40,000</dd>
+                  <dd>
+                    <input name='p' type="radio" (click)='p(40000);'>&nbsp;₹40,000 – ₹50,000</dd>
+                  <dd>
+                    <input name='p' type="radio" (click)='p(50000);'>&nbsp;Over ₹50,000</dd>
+                </div>
+              </dl>
+              <dl>
+                <dt>
+                  <a data-toggle="collapse" href="#customerReview" role="button" aria-expanded="false" aria-controls="customerReview">Average Review&gt;&gt;</a>
+                </dt>
+                <div class='collapse multi-collapse' id='customerReview'>
+                  <dd>
+                    <input name='acr' type="radio" (click)='acr(4);'>&nbsp;4 Stars &amp; Up</dd>
+                  <dd>
+                    <input name='acr' type="radio" (click)='acr(3);'>&nbsp;3 Stars &amp; Up</dd>
+                  <dd>
+                    <input name='acr' type="radio" (click)='acr(2);'>&nbsp;2 Stars &amp; Up</dd>
+                  <dd>
+                    <input name='acr' type="radio" (click)='acr(1);'>&nbsp;1 Star &amp; Up</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </body>
+      <br/>
+      <a data-toggle="collapse" href=".multi-collapse" role="button" aria-expanded="false" aria-controls="memorySize hardDisk operatingSystem customerReview price"> Click here to collapse all filters</a>
+      <br/>
+      <br/>
+    </div>
+    <main class='col-xs-6 col-sm-6 col-md-8 col-lg-9 col-xl-10'>
+
+        <div class='container-fluid sortby'>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-right'>
+            <div class="dropdown">
+              &nbsp;&nbsp;&nbsp;
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Sort By:
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- <a class="dropdown-item" href="#">New &amp; Popular</a> -->
+                <a class="dropdown-item" (click)="sortBy('lh');">Price: Low to High</a>
+                <a class="dropdown-item" (click)="sortBy('hl');">Price: High to Low</a>
+                <a class="dropdown-item" (click)="sortBy('cr');">Avg. Customer Reviews</a>
+                <!-- <a class="dropdown-item" href="#">Newest Arrivals</a> -->
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="container-fluid" id='cards'>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" *ngFor='let data of arrays'>
+            <div class="card h-100">
+              <img class="card-img-top" src="{{data.img}}" alt="">
+              <div class="card-body">
+                <h6 class="card-title">
+                  {{data.Ptitle}}
+                </h6>
+                <h5>&#8377;{{data.Pprice}}</h5>
+                <span>Brand: {{data.Pbrand}}</span>
+                <br/>
+                <span>Hard Disk: {{data.Phdd}}GB</span>
+                <br/>
+                <span>OS: {{data.Pos}}</span>
+                <br/>
+                <span>RAM: {{data.Pram}}GB</span>
+                <br/>
+              </div>
+              <div class="card-footer">
+                <span class='yellow'>Rating: {{data.Prating}}</span>
+                <button class='btn btn-primary float-right' (click)='addpo(data);'>Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </main>
+  </div>
+</div>
+
+

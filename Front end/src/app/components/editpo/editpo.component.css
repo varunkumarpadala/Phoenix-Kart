@@ -1,0 +1,27 @@
+ 
+  body
+  {
+      padding:0px;
+      margin:0px;
+  }
+  #sendMessageButton
+  {
+      border-top-left-radius:15px;
+      border-bottom-right-radius:15px;
+      padding:5px 50px 5px 50px;
+  }
+
+  *{
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 50px;
+  }
+  h2
+  {
+    font-size:28px;
+    font-family: monospace;
+  }
+
+  td{
+    text-indent: 80px;
+  }
